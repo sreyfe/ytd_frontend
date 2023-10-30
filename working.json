@@ -1,4 +1,6 @@
-[{
+{
+"entries": [
+{
 	"title": "\u05d0\u05d3\u05e2\u05e8 \u05d3\u05d9 \u05d2\u05e2\u05e9\u05d9\u05db\u05d8\u05e2 \u05e4\u05d5\u05df \u05d3\u05e2\u05e8 \u05ea\u05d5\u05e8\u05d4 \u05e9\u05d1\u05e2\u05dc \u05e4\u05d4",
 	"author": "Weiss, Isaac Hirsch, 1815-1905",
 	"translator": "Schwartz, Israel Jacob",
@@ -17119,11 +17121,11 @@
 }, {
 	"title": "Amazonen, oder, Der kampf tsvishen di prister fun vesta un Amor roman fun dem leben fun der hoykher gezelshaft in Amerika un England",
 	"author": "Kraft, Robert",
-	"translator": "Mikhaylovitsh, M.",
+	"translator": "unknown",
 	"o_title": "Die Vestalinnen",
 	"o_language": "German",
 	"wikidata": "",
-	"notes": "",
+	"notes": "Mikhaylovitsh, M. is listed as author",
 	"links": "",
 	"volume": "no volume",
 	"nybc_id": "nybc208552",
@@ -17133,7 +17135,7 @@
 	"place": "New York",
 	"publisher": "Jewish Press",
 	"year": 1913,
-	"keywords": []
+	"keywords": ["false attribution"]
 }, {
 	"title": "Rede afn XvIII tsuzamenfor fun der A.L.k.P.(B), dem 13 Mart 1939",
 	"author": "Mikoyan, Anastas",
@@ -37332,3 +37334,5 @@
 	"keywords": []
 }
 ]
+
+}
