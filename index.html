@@ -126,7 +126,7 @@ these are functional jmespath queries -->
 			var field_id = "field-" + this_div
 			console.log(field_id)
 
-			select.innerHTML += '<div id=' + this_div +'> <label for="field-'+this_div+'"></label> <select id="field-'+this_div+'"> </select> <label for="search-type-'+this_div+'"></label> <select id="search-type-'+this_div+'"> <option value="contains">contains</option> <option value="not-contain">does not contain</option> <option value="equals">is exactly</option> <option value="greater">is greater than</option> <option value="less">is less than</option> </select> <input type="text" id="search-bar-'+this_div+'" placeholder="Content..."><button id="remove-search-' + this_div + '"type="submit" onclick="removeSearch('+this_div+')">-</button>'
+			select.innerHTML += '<div id=' + this_div +'> <label for="field-'+this_div+'"></label> <select id="field-'+this_div+'"> </select> <label for="search-type-'+this_div+'"></label> <select id="search-type-'+this_div+'"> <option value="contains">contains</option> <option value="not-contain">does not contain</option> <option value="equals">is exactly</option> <option value="greater">is greater than</option> <option value="less">is less than</option> </select> <input type="text" id="search-bar-'+this_div+'" placeholder="Content..."><button id="remove-search-' + this_div + '"type="submit" onclick="removeSearch('+this_div+')">-</button></div>'
 			
 			document.getElementById(field_id).innerHTML = document.getElementById('field-1').innerHTML
 
@@ -134,7 +134,20 @@ these are functional jmespath queries -->
 
 		function removeSearch(id){
 			document.getElementById(id).outerHTML = ""
+			var select = document.getElementById("search-box")
+			var div_length = select.getElementsByTagName('div').length;
+
+			if(document.getElementById(id+1) !== null){
+				for (let i = id + 1; i <= div_length + 1; i++){
+						console.log(i)
+						console.log(div_length)
+						var demoted = i - 1;
+						document.getElementById(i).outerHTML = '<div id=' + demoted +'> <label for="field-'+demoted+'"></label> <select id="field-'+demoted+'"> </select> <label for="search-type-'+demoted+'"></label> <select id="search-type-'+demoted+'"> <option value="contains">contains</option> <option value="not-contain">does not contain</option> <option value="equals">is exactly</option> <option value="greater">is greater than</option> <option value="less">is less than</option> </select> <input type="text" id="search-bar-'+demoted+'" placeholder="Content..."><button id="remove-search-' + demoted + '"type="submit" onclick="removeSearch('+demoted+')">-</button>'
+						var field = 'field-'+demoted;
+						document.getElementById(field).innerHTML = document.getElementById("field-1").innerHTML
+			}
 		}
+	}
 		
 		function drawTable(json_array){
 			$(document).ready(function() {
